@@ -1,4 +1,4 @@
-package com.mannu.rest.webservices.restfulwebservices;
+package com.mannu.rest.webservices.restfulwebservices.helloWorld;
 
 public class HelloWorldBean{
 	
