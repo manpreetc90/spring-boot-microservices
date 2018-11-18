@@ -46,5 +46,9 @@ public class User {
 		this.birthDate = birthDate;
 	}
 	
+	//default no args constructor for 500 server error
+	protected User(){
+		
+	}
 
 }
