@@ -29,8 +29,13 @@ public class UserResource {
 	//retrieve user with id(using @PathVariable from url)
 	@GetMapping("/users/{id}")
 	public User retriveUser(@PathVariable int id){
-		return userDaoService.findOne(id);
-	}
+		User user=userDaoService.findOne(id);
+		if(user==null)
+		{
+			throw new UserNotFoundException("userid - "+id);
+		}
+		return user;
+		}
 	
 	//Create new user
 	//CREATED --  status
