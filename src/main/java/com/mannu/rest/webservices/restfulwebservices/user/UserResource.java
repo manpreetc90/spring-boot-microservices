@@ -56,7 +56,7 @@ public class UserResource {
 	//input -  details of user (from request body using @RequestBody)
 	//output -- created and return the created URI
 	@PostMapping("/users")
-	public ResponseEntity<Object> createUser(@RequestBody User user){
+	public ResponseEntity<Object> createUser(@Valid @RequestBody User user){
 		User savedUser=userDaoService.save(user);
 		
 		//created
